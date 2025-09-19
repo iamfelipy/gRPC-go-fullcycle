@@ -1,0 +1,27 @@
+// versao
+syntax = "proto3";
+// nome do pacote
+package pb;
+// onde vai ser gerado o pacote baseado na linguagem de programação escolhida
+option go_package = "internal/pb";
+
+message Category {
+    // esses numeros depois do =, é apenas a posição
+    string name = 1;
+    string description = 2;
+}
+
+message CreateCategoryRequest {
+    string name = 1;
+    string description = 2;
+}
+
+message CategoryResponse {
+    Category category = 1;
+}
+
+service CategoryService {
+    rpc CreateCategory(CreateCategoryRequest) returns (CategoryResponse) {}
+}
+
+
