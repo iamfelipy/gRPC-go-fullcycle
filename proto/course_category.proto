@@ -7,8 +7,9 @@ option go_package = "internal/pb";
 
 message Category {
     // esses numeros depois do =, é apenas a posição
-    string name = 1;
-    string description = 2;
+    string id = 1;
+    string name = 2;
+    string description = 3;
 }
 
 message CreateCategoryRequest {

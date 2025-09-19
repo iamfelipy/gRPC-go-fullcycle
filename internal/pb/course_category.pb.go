@@ -28,8 +28,9 @@ const (
 type Category struct {
 	state protoimpl.MessageState `protogen:"open.v1"`
 	// esses numeros depois do =, é apenas a posição
-	Name          string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Description   string `protobuf:"bytes,2,opt,name=description,proto3" json:"description,omitempty"`
+	Id            string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Name          string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Description   string `protobuf:"bytes,3,opt,name=description,proto3" json:"description,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -62,6 +63,13 @@ func (x *Category) ProtoReflect() protoreflect.Message {
 // Deprecated: Use Category.ProtoReflect.Descriptor instead.
 func (*Category) Descriptor() ([]byte, []int) {
 	return file_proto_course_category_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *Category) GetId() string {
+	if x != nil {
+		return x.Id
+	}
+	return ""
 }
 
 func (x *Category) GetName() string {
@@ -178,10 +186,11 @@ var File_proto_course_category_proto protoreflect.FileDescriptor
 
 const file_proto_course_category_proto_rawDesc = "" +
 	"\n" +
-	"\x1bproto/course_category.proto\x12\x02pb\"@\n" +
-	"\bCategory\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name\x12 \n" +
-	"\vdescription\x18\x02 \x01(\tR\vdescription\"M\n" +
+	"\x1bproto/course_category.proto\x12\x02pb\"P\n" +
+	"\bCategory\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\tR\x02id\x12\x12\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name\x12 \n" +
+	"\vdescription\x18\x03 \x01(\tR\vdescription\"M\n" +
 	"\x15CreateCategoryRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12 \n" +
 	"\vdescription\x18\x02 \x01(\tR\vdescription\"<\n" +
