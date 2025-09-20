@@ -33,6 +33,7 @@ show service
 service CategoryService
 call CreateCategory
 call ListCategories
+call GetCategory
 
 Consulte a documentação do Evans: https://github.com/ktr0731/evans para mais comandos e opções.
 
