@@ -5,6 +5,8 @@ package pb;
 // onde vai ser gerado o pacote baseado na linguagem de programação escolhida
 option go_package = "internal/pb";
 
+message blank {}
+
 message Category {
     // esses numeros depois do =, é apenas a posição
     string id = 1;
@@ -17,12 +19,13 @@ message CreateCategoryRequest {
     string description = 2;
 }
 
-message CategoryResponse {
-    Category category = 1;
+message CategoryList {
+    repeated Category categories = 1;
 }
 
 service CategoryService {
     rpc CreateCategory(CreateCategoryRequest) returns (Category) {}
+    rpc ListCategories(blank) returns (CategoryList) {}
 }
 
 
