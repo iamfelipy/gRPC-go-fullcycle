@@ -12,5 +12,8 @@ RUN apt-get update && \
 RUN go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 RUN go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
+# --- Install Evans ---
+RUN go install github.com/ktr0731/evans@latest
+
 # Ensure Go bin is on PATH (should already be set in base image)
 ENV PATH="$PATH:$(go env GOPATH)/bin"
