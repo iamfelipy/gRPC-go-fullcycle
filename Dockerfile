@@ -5,7 +5,8 @@ FROM mcr.microsoft.com/devcontainers/go:1-1.24-bookworm
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         protobuf-compiler \
-        git && \
+        git \
+        sqlite3 && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # --- Install Go protoc plugins ---
