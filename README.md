@@ -28,12 +28,14 @@ evans -r repl
 
 No prompt do Evans, você pode selecionar o pacote e visualizar os serviços disponíveis:
 
-package pb
-show service
-service CategoryService
-call CreateCategory
-call ListCategories
-call GetCategory
+- package pb
+- show service
+- service CategoryService
+- call CreateCategory
+- call ListCategories
+- call GetCategory
+- call CreateCategoryStream
+    - ctrl + d para parar a stream
 
 Consulte a documentação do Evans: https://github.com/ktr0731/evans para mais comandos e opções.
 
