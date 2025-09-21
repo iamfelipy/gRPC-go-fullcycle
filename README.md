@@ -36,6 +36,7 @@ No prompt do Evans, você pode selecionar o pacote e visualizar os serviços dis
 - call GetCategory
 - call CreateCategoryStream
     - ctrl + d para parar a stream
+- call CreateCategoryStreamBidirectional
 
 Consulte a documentação do Evans: https://github.com/ktr0731/evans para mais comandos e opções.
 
